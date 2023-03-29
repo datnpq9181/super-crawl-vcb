@@ -45,7 +45,7 @@ async function main() {
     const captcha = await captcha_solver(img_base64);
     if (captcha.result) {
       total += 1;
-      console.log(captcha.result);
+      console.log('Downloaded: ',captcha.result);
       saveImageFromBase64String(
         img_base64,
         `./captcha-vcb/${captcha.result}.png`
