@@ -48,7 +48,7 @@ async function main() {
       console.log('Downloaded: ',captcha.result);
       saveImageFromBase64String(
         img_base64,
-        `./captcha-vcb/${captcha.result}.png`
+        `./crawl-data/vietcombank/${captcha.result}.png`
       );
     }
   }

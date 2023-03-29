@@ -5,4 +5,4 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./captcha-vcb:/app/captcha-vcb
+      - ./crawl-data/vietcombank:/app/crawl-data/vietcombank
