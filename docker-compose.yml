@@ -1,8 +1,8 @@
 version: '3'
 services:
-  crawlapp:
+  app:
     build: .
     ports:
       - "8080:8080"
     volumes:
-      - ./captcha-vcb:/crawlapp/captcha-vcb
+      - ./captcha-vcb:/app/captcha-vcb

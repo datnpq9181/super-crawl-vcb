@@ -8,7 +8,7 @@ RUN npm install --production
 
 COPY . .
 
-COPY captcha-vcb .
+COPY captcha-vcb ./captcha-vcb
 
 EXPOSE 8080
 
