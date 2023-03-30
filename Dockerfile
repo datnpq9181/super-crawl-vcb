@@ -1,17 +1,15 @@
-# Use an official Node.js runtime as a parent image
-FROM node:16
+FROM node:14-alpine
 
-# Set the working directory to /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# Copy the current directory contents into the container at /usr/src/app
-COPY . /usr/src/app
+COPY package*.json ./
 
-# Install any needed packages specified in package.json
-RUN npm install
+RUN npm install --production
 
-# Make port 8080 available to the world outside this container
+COPY . .
+
+COPY captcha-vcb .
+
 EXPOSE 8080
 
-# Start the app using a different command
-CMD ["node", "server.js"]
+CMD ["npm", "start"]
