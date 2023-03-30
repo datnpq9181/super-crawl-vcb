@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a parent image
-FROM node:14
+FROM node:16
 
 # Set the working directory to /usr/src/app
 WORKDIR /usr/src/app
@@ -14,4 +14,4 @@ RUN npm install
 EXPOSE 8080
 
 # Start the app using a different command
-CMD ["node", "app.js"]
+CMD ["node", "server.js"]
